@@ -1,0 +1,19 @@
+.obj {
+    height: 160px;
+    object-fit: contain;
+    
+    display: block;
+  }
+  
+  .show-item {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  #preview meter {
+    width: 100%;
+  }
+  
+  .visually-hidden {
+    visibility: hidden;
+  }
