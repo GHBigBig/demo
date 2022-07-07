@@ -1,41 +1,269 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
+        defer></script>
     <title>BootStrap5</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-primary bg-gradient navbar-dark shadow">
+    <!-- 大于 992px(Large) 水平展示导航内容，小于 992px 折叠展示导航内容 -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">我在B站玩编程</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- data-bs-toggle 指以什么类型的事件触发 data-bs-target 指事件的目标 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto"><!-- margin start = margin left -->
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">前端知识</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">后端知识</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">数据库知识</a>
-                </li>
-            </ul>
-        </div>
+                <ul class="navbar-nav ms-auto">
+                    <!-- margin start = margin left -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">前端知识</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">后端知识</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">数据库知识</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <section>
+    <!-- 大于 768px(Medium) 展示图片，小于 768px 隐藏图片 -->
+    <section class="bg-dark text-light  text-sm-start text-center p-5">
         <div class="container">
-            
+            <div class="d-flex">
+                <div>
+                    <h1>成为一个<span class="text-warning">前端工程师</span></h1>
+                    <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sapiente adipisci
+                        fugiat illo exercitationem cum sint ullam molestiae! Dolore delectus voluptatum earum alias
+                        recusandae rem minima eos sint expedita iste?</p> <!-- my = margin-top margin-bottom -->
+                    <button class="btn btn-primary btn-lg">开始编程之旅</button>
+                </div>
+                <img src="./img/showcase.svg" alt="showcase" class="w-50 d-none d-md-block">
+            </div>
         </div>
     </section>
+    <!-- 大于 768px(Medium) 水平展示内容，小于 768px 垂直展示内容 -->
+    <section class="p-5 bg-primary text-light">
+        <div class="container">
+            <div class="d-md-flex justify-content-between align-items-center">
+                <h3 class="mb-3">现在注册账号开始编程之旅</h3>
+                <div class="input-group input-md-group">
+                    <input type="email" class="form-control" placeholder="请输入你的邮箱~">
+                    <button class="btn btn-dark btn-lg">注册</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 大于 768px(Medium) 水平展示内容，小于 768px 垂直展示内容，卡片展示 -->
+    <section class="p-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">前端知识</h6>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+                                facere alias. Magnam commodi vero aliquid ratione officiis temporibus </p>
+                            <a href="#" class="btn btn-primary">学习前端</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-secondary text-light">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">后端知识</h6>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+                                facere alias. Magnam commodi vero aliquid ratione officiis temporibus </p>
+                            <a href="#" class="btn btn-dark">学习后端</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">数据库知识</h6>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+                                facere alias. Magnam commodi vero aliquid ratione officiis temporibus </p>
+                            <a href="#" class="btn btn-primary">学习数据库</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 大于 768px(Medium) 水平展示内容，小于 768px 垂直展示内容，卡片展示 -->
+    <section class="p-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md">
+                    <img src="./img/1.svg" alt="课程介绍" class="img-fluid">
+                </div>
+                <div class="col-md p-5">
+                    <h2>课程介绍</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aliquid ut
+                        necessitatibus, debitis molestiae blanditiis esse nesciunt fuga enim vero non ex sed vitae
+                        molestias, voluptate doloribus dolores nisi facilis!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, suscipit! Numquam autem et
+                        excepturi repellendus quo explicabo nulla corrupti dolor eius veniam nihil, totam blanditiis
+                        illo. Dignissimos mollitia sequi ut.</p>
+                    <a href="#" class="btn btn-light">查看更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 大于 768px(Medium) 水平展示内容，小于 768px 垂直展示内容，卡片展示 -->
+    <section class="p-5 bg-dark">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md p-5 text-light">
+                    <h2>课程介绍</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aliquid ut
+                        necessitatibus, debitis molestiae blanditiis esse nesciunt fuga enim vero non ex sed vitae
+                        molestias, voluptate doloribus dolores nisi facilis!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, suscipit! Numquam autem et
+                        excepturi repellendus quo explicabo nulla corrupti dolor eius veniam nihil, totam blanditiis
+                        illo. Dignissimos mollitia sequi ut.</p>
+                    <a href="#" class="btn btn-light">查看更多</a>
+                </div>
+                <div class="col-md">
+                    <img src="./img/2.svg" alt="课程介绍" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 无论何种样式都是垂直排列 -->
+    <section class="p-5">
+        <h2 class="text-center">常见问题</h2>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine
+                        this being filled with some actual content.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more
+                        exciting happening here in terms of content, but just filling up the space to make it look, at
+                        least at first glance, a bit more representative of how this would look in a real-world
+                        application.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 小于 768px(Medium) 时垂直展示，大于 768px 小于 992px(lg) 时双列展示，大于 992px 时四列展示 -->
+    <section class="p-5 bg-primary">
+        <div class="container text-center">
+            <h2 class=" text-light">讲师介绍</h2>
+            <p class="mb-4 text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit quasi
+                reiciendis
+                debitis</p>
+            <div class="row g-4">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./img/01-man.jpeg" class="rounded-circle mb-3" alt="01-man">
+                            <h3 class="card-title">张三</h3>
+                            <p class="card-text ">Some quick example text to build on the card title and make up the
+                                bulk of
+                                the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./img/01-man.jpeg" class="rounded-circle mb-3" alt="01-man">
+                            <h3 class="card-title">张三</h3>
+                            <p class="card-text ">Some quick example text to build on the card title and make up the
+                                bulk of
+                                the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./img/01-man.jpeg" class="rounded-circle mb-3" alt="01-man">
+                            <h3 class="card-title">张三</h3>
+                            <p class="card-text ">Some quick example text to build on the card title and make up the
+                                bulk of
+                                the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./img/01-man.jpeg" class="rounded-circle mb-3" alt="01-man">
+                            <h3 class="card-title">张三</h3>
+                            <p class="card-text ">Some quick example text to build on the card title and make up the
+                                bulk of
+                                the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 无论何种样式都是垂直排列 -->
+    <section class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-2">联系我们</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">电话：138xxxxxxxx</li>
+                <li class="list-group-item">邮箱：bootstrap@qq.com</li>
+                <li class="list-group-item">地址：上海</li>
+            </ul>
+        </div>
+    </section>
+    <footer class="p-5 bg-dark text-light text-center">
+        <div class="container">
+            <p class="lead">Copyright &copy; 2022 我在B站玩编程</p>
+        </div>
+    </footer>
 </body>
+
 </html>
