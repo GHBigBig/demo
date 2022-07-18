@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" charset="UTF-8" />
+<title>Sending forms with FormData &ndash; MDN</title>
+
+</head>
+<body>
+
+<h2>Using the POST method</h2>
+<h3>Enctype: application/x-www-form-urlencoded (default)</h3>
+
+<form  method="post"  id="fuck">
+  <!-- <fieldset> -->
+    <legend>Registration example</legend>
+    <p>
+      First name: <input type="text" name="firstname" /><br />
+      Last name: <input type="text" name="lastname" />
+    </p>
+    <p>
+      <input type="submit" value="Submit" />
+    </p>
+  <!-- </fieldset> -->
+</form>
+
+
+<script>
+  let fuck = document.querySelector('#fuck');
+  fuck.addEventListener('submit', AJAXSubmit);
+  
+  function AJAXSubmit (e) {
+    e.preventDefault();
+    
+    console.log(e);
+    debugger
+    e.preventDefault();
+    
+   
+    var oReq = new XMLHttpRequest();
+    // oReq.onload = ajaxSuccess();
+    
+      oReq.open("post", 'http://101.42.249.107:5000/api/users/login');
+      oReq.send(new FormData(fuck));
+    
+  }
+  </script>
+</body>
+</html>
